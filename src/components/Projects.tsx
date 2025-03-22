@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import type { Project } from '../types/portfolio';
 
 interface ProjectsProps {
@@ -6,17 +6,15 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
-    <div id="projects" className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div id="projects" className="py-20 bg-space-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Portfolio</h2>
-          <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-base text-space-400 font-semibold tracking-wide uppercase">Portfolio</h2>
+          <h3 className="text-3xl leading-8 font-extrabold tracking-tight text-space-100 sm:text-4xl">
             Featured Projects
           </h3>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-space-300 mx-auto">
             A showcase of my recent work and technical abilities
           </p>
         </div>
@@ -25,9 +23,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              className="group relative space-card overflow-hidden shadow-glow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative h-60 overflow-hidden">
                 <img
@@ -35,21 +31,21 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                   src={project.imageUrl}
                   alt={project.title}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
               
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">
+              <div className="p-6 relative z-10">
+                <h4 className="text-xl font-bold text-space-100 group-hover:text-space-400 transition-colors duration-300">
                   {project.title}
                 </h4>
-                <p className="mt-3 text-gray-600">
+                <p className="mt-3 text-space-300">
                   {project.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800"
+                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-dark-800 text-space-300 border border-space-700/30"
                     >
                       {tech}
                     </span>
@@ -62,7 +58,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-indigo-600 transition-colors duration-300"
+                      className="text-space-300 hover:text-space-400 transition-colors duration-300 cursor-pointer"
                       aria-label="GitHub repository"
                     >
                       <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -75,7 +71,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-indigo-600 transition-colors duration-300"
+                      className="text-space-300 hover:text-space-400 transition-colors duration-300 cursor-pointer"
                       aria-label="Live demo"
                     >
                       <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +81,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                   )}
                   
                   <div className="ml-auto">
-                    <span className="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                    <span className="inline-flex items-center text-sm font-medium text-space-400 hover:text-space-300 cursor-pointer">
                       <span className="group-hover:underline">Details</span>
                       <svg className="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

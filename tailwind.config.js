@@ -1,10 +1,47 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
-                gray: {
+                space: {
+                    50: '#E6F3FF',
+                    100: '#CCE7FF',
+                    200: '#99CFFF',
+                    300: '#66B7FF',
+                    400: '#339FFF',
+                    500: '#0087FF',
+                    600: '#006CCC',
+                    700: '#005199',
+                    800: '#003666',
+                    900: '#001B33',
+                },
+                nebula: {
+                    50: '#F5E6FF',
+                    100: '#E6CCFF',
+                    200: '#CC99FF',
+                    300: '#B366FF',
+                    400: '#9933FF',
+                    500: '#8000FF',
+                    600: '#6600CC',
+                    700: '#4C0099',
+                    800: '#330066',
+                    900: '#190033',
+                },
+                cosmic: {
+                    50: '#F0F9FF',
+                    100: '#E0F2FE',
+                    200: '#BAE6FD',
+                    300: '#7DD3FC',
+                    400: '#38BDF8',
+                    500: '#0EA5E9',
+                    600: '#0284C7',
+                    700: '#0369A1',
+                    800: '#075985',
+                    900: '#0C4A6E',
+                },
+                dark: {
                     50: '#F9FAFB',
                     100: '#F3F4F6',
                     200: '#E5E7EB',
@@ -16,24 +53,18 @@ module.exports = {
                     800: '#1F2937',
                     900: '#111827',
                 },
-                indigo: {
-                    50: '#EEF2FF',
-                    100: '#E0E7FF',
-                    200: '#C7D2FE',
-                    300: '#A5B4FC',
-                    400: '#818CF8',
-                    500: '#6366F1',
-                    600: '#4F46E5',
-                    700: '#4338CA',
-                    800: '#3730A3',
-                    900: '#312E81',
-                },
-                slate: {
-                    300: '#CBD5E1',
-                    500: '#64748B',
-                    600: '#475569',
-                    900: '#0F172A',
-                },
+            },
+            backgroundImage: {
+                'space-gradient': 'linear-gradient(to bottom, #000000, #1a1a2e)',
+                'nebula-gradient': 'linear-gradient(45deg, #1a1a2e, #16213e, #1a1a2e)',
+                'card-gradient': 'linear-gradient(145deg, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.9))',
+                'space-card-gradient': 'linear-gradient(145deg, rgba(0, 135, 255, 0.1), rgba(128, 0, 255, 0.1))',
+            },
+            boxShadow: {
+                'glow': '0 0 15px rgba(0, 135, 255, 0.3)',
+            },
+            backdropBlur: {
+                'xs': '2px',
             },
         },
     },

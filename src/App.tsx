@@ -10,9 +10,9 @@ import { portfolioData } from './data/portfolioData';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-dark-900">
       <Navbar />
-      <main>
+      <main className="space-y-16">
         <Hero data={portfolioData} />
         <About data={portfolioData} />
         <Projects projects={portfolioData.projects} />
