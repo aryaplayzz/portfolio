@@ -21,7 +21,7 @@ export const portfolioData: PortfolioData = {
       title: "Project 2",
       description: "Portfolio Website",
       technologies: ["React", "TypeScript", "Tailwind CSS"],
-      imageUrl: "/images/projects/portfolio_temp.png",
+      imageUrl: "/images/projects/project2.png",
       githubUrl: "https://github.com/aryaplayzz",
       liveUrl: "put live url here"
     }
@@ -34,7 +34,7 @@ export const portfolioData: PortfolioData = {
       description: "Student Intern at Michigan State University building an IOS app for New Student Orientation",
       technologies: ["React Native", "Firebase", "Git"]
     },
-    
+
   ],
   education: [
     {
