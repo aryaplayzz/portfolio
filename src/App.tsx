@@ -1,4 +1,6 @@
 import React from 'react';
+import './styles/global.css';
+import styles from './styles/App.module.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -10,9 +12,9 @@ import { portfolioData } from './data/portfolioData';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className={styles.app}>
       <Navbar />
-      <main className="space-y-16">
+      <main className={styles.mainContent}>
         <Hero data={portfolioData} />
         <About data={portfolioData} />
         <Projects projects={portfolioData.projects} />

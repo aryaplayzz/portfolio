@@ -19,11 +19,11 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "Project 2",
-      description: "Portfolio Website",
+      description: "A sleek, responsive portfolio website designed to highlight my work with clean aesthetics, subtle animations, and an emphasis on user experience.",
       technologies: ["React", "TypeScript", "Tailwind CSS"],
       imageUrl: "/images/projects/project2.png",
       githubUrl: "https://github.com/aryaplayzz",
-      liveUrl: "put live url here"
+      liveUrl: "https://aryaamiri.com"
     }
   ],
   experience: [

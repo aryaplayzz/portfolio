@@ -1,0 +1,212 @@
+.contactSection {
+  padding: 5rem 0;
+  background-color: var(--color-dark-900);
+  position: relative;
+}
+
+.decorativeBackground {
+  display: none;
+}
+
+.decorativeCircle1 {
+  display: none;
+}
+
+.decorativeCircle2 {
+  display: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--spacing-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-8);
+  }
+}
+
+.header {
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-space-400);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--color-space-100);
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.description {
+  margin-top: 1rem;
+  max-width: 42rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--color-space-300);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactWrapper {
+  margin-top: 4rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactCard {
+  background-color: var(--color-dark-800);
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+  box-shadow: var(--shadow-glow);
+  border: 1px solid rgba(0, 135, 255, 0.1);
+}
+
+.contactCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(circle at center, rgba(0, 135, 255, 0.1) 0%, transparent 70%);
+}
+
+.contactCard:hover::before {
+  opacity: 1;
+}
+
+.cardContent {
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 30;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.emailContainer {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-dark-800);
+  border: 1px solid rgba(0, 135, 255, 0.3);
+  border-radius: 0.5rem;
+  width: auto;
+  max-width: fit-content;
+  color: var(--color-space-200);
+  font-size: 1.125rem;
+}
+
+.emailIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.75rem;
+  color: var(--color-space-200);
+}
+
+.emailButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  background-color: var(--color-space-600);
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  z-index: 40;
+}
+
+.emailButton:hover {
+  background-color: var(--color-space-500);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.buttonIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.connectSection {
+  margin-top: 2rem;
+}
+
+.connectTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-space-200);
+}
+
+.socialLinks {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialLink {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-space-500);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.socialLink:hover {
+  background-color: var(--color-space-400);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.socialIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: white;
+} 

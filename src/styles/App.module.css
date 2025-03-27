@@ -1,0 +1,10 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--color-dark-900);
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; /* 64px, equivalent to space-y-16 in Tailwind */
+} 

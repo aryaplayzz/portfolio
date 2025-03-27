@@ -1,0 +1,235 @@
+.experienceSection {
+  padding: 5rem 0;
+  background-color: var(--color-dark-900);
+  position: relative;
+}
+
+.decorativeBackground {
+  display: none;
+}
+
+.decorativeCircle1 {
+  display: none;
+}
+
+.decorativeCircle2 {
+  display: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--spacing-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-8);
+  }
+}
+
+.header {
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-space-400);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--color-space-100);
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.description {
+  margin-top: 1rem;
+  max-width: 42rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--color-space-300);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.timelineItem {
+  position: relative;
+  padding: 2rem;
+  background-color: var(--color-dark-800);
+  border-radius: 0.75rem;
+  transition: background-color 0.3s, transform 0.3s;
+  border: 1px solid rgba(0, 135, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timelineItem:hover {
+  background-color: var(--color-dark-700);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 1024px) {
+  .timelineItem {
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    gap: 2rem;
+  }
+}
+
+.dateContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dateDot {
+  flex-shrink: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--color-space-500);
+}
+
+.timelineItem:hover .dateDot {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 135, 255, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 135, 255, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 135, 255, 0);
+  }
+}
+
+.dateText {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-space-400);
+  transition: color 0.3s;
+}
+
+.timelineItem:hover .dateText {
+  color: var(--color-space-300);
+}
+
+.content {
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    margin-top: 0;
+  }
+}
+
+.position {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-space-100);
+  transition: color 0.3s;
+}
+
+.timelineItem:hover .position {
+  color: var(--color-space-400);
+}
+
+.company {
+  margin-top: 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-space-200);
+}
+
+.jobDescription {
+  margin-top: 1rem;
+  color: var(--color-space-300);
+  transition: color 0.3s;
+}
+
+.timelineItem:hover .jobDescription {
+  color: var(--color-space-200);
+}
+
+.techTags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--color-dark-800);
+  color: var(--color-space-300);
+  border: 1px solid rgba(0, 135, 255, 0.3);
+  transition: border-color 0.3s;
+}
+
+.timelineItem:hover .techTag {
+  border-color: rgba(0, 135, 255, 0.5);
+}
+
+.timelineConnector {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .timelineConnector {
+    display: block;
+    position: absolute;
+    left: 2.5rem;
+    top: 3rem;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(0, 135, 255, 0.3);
+    transition: background-color 0.3s;
+  }
+  
+  .timelineItem:hover .timelineConnector {
+    background-color: rgba(0, 135, 255, 0.5);
+  }
+} 

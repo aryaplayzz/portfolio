@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { PortfolioData } from '../types/portfolio';
+import styles from '../styles/Hero.module.css';
 
 interface HeroProps {
   data: Pick<PortfolioData, 'name' | 'title' | 'about' | 'profileImage'>;
@@ -14,58 +15,58 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
   }, []);
 
   return (
-    <div id="home" className="relative min-h-screen flex items-center overflow-hidden bg-space-gradient pt-16">
+    <div id="home" className={styles.hero}>
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-space-500/10"></div>
-        <div className="absolute top-60 -left-20 w-60 h-60 rounded-full bg-nebula-500/10"></div>
-        <div className="absolute -bottom-40 right-20 w-72 h-72 rounded-full bg-space-400/10"></div>
+      <div className={styles.background}>
+        <div className={`${styles.circle} ${styles.circle1}`}></div>
+        <div className={`${styles.circle} ${styles.circle2}`}></div>
+        <div className={`${styles.circle} ${styles.circle3}`}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-space-100">
-              <span className="block text-space-300">Hello, I'm</span>
-              <span className="block mt-2 gradient-text relative">
+      <div className={styles.container}>
+        <div className={styles.grid}>
+          <div className={`${styles.content} ${isVisible ? styles.visible : styles.hidden}`}>
+            <h1 className={styles.heading}>
+              <span className={styles.subtitle}>Hello, I'm</span>
+              <span className={styles.title}>
                 {data.name}
-                <span className="absolute -bottom-2 left-0 w-24 h-1 bg-space-500 rounded-full"></span>
+                <span className={styles.underline}></span>
               </span>
             </h1>
-            <h2 className="mt-6 text-xl md:text-2xl font-medium text-space-200">
+            <h2 className={styles.position}>
               {data.title}
             </h2>
-            <p className="mt-6 text-base md:text-lg text-space-300 max-w-xl">
+            <p className={styles.description}>
               {data.about}
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <div className={styles.buttons}>
               <a
                 href="#projects"
-                className="button-primary"
+                className={styles.primaryButton}
               >
                 View My Work
               </a>
               <a
                 href="#contact"
-                className="button-secondary"
+                className={styles.secondaryButton}
               >
                 Contact Me
               </a>
             </div>
           </div>
-          <div className={`hidden lg:block transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
-            <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-space-500/10 mx-auto flex items-center justify-center p-6">
-                <div className="w-72 h-72 rounded-full bg-space-500/20 flex items-center justify-center p-6">
-                  <div className="w-64 h-64 rounded-full bg-space-500/30 flex items-center justify-center overflow-hidden border-4 border-dark-800 shadow-glow">
+          <div className={`${styles.profileContainer} ${isVisible ? styles.profileVisible : styles.profileHidden}`}>
+            <div className={styles.profileWrapper}>
+              <div className={styles.profileRing1}>
+                <div className={styles.profileRing2}>
+                  <div className={styles.profileImageContainer}>
                     {data.profileImage ? (
                       <img 
                         src={data.profileImage} 
                         alt={`${data.name}`}
-                        className="w-full h-full object-cover"
+                        className={styles.profileImage}
                       />
                     ) : (
-                      <div className="text-8xl text-space-100">
+                      <div className={styles.profileInitial}>
                         {data.name.charAt(0)}
                       </div>
                     )}
