@@ -38,7 +38,7 @@ const Contact: React.FC<ContactProps> = ({ data }) => {
                 </div>
 
                 <a
-                  href={`mailto:${data.email}?subject=${encodeURIComponent('Portfolio Contact')}&body=${encodeURIComponent(`Hello ${data.name},\n\nI am reaching out regarding your portfolio...`)}`}
+                  href={`mailto:${data.email}?subject=${encodeURIComponent('Portfolio Contact')}&body=${encodeURIComponent(`Hello Arya,\n\nI am reaching out regarding...`)}`}
                   className={styles.emailButton}
                 >
                   <svg className={styles.buttonIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
